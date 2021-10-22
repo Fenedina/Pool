@@ -1,0 +1,5 @@
+Credentials cache: API:17029
+        Principal: fenedina@MSK.21-SCHOOL.RU
+
+  Issued                Expires               Principal
+Aug 30 19:36:18 2021  Aug 31 05:35:46 2021  krbtgt/MSK.21-SCHOOL.RU@MSK.21-SCHOOL.RU

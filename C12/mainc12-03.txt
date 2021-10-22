@@ -1,0 +1,67 @@
+----------------------------ex02--------------------------------------
+
+#include <stdio.h>
+
+int main()
+{
+	t_list	*begin;
+	t_list	test1;
+	t_list	test2;
+	t_list	test3;
+	t_list	test4;
+
+	begin  = &test1;
+	test1.next = &test2;
+	test2.next = &test3;
+	test3.next = &test4;
+	test4.next = 0;
+
+	printf("%d\n", ft_list_size(begin));
+	return (0);
+}
+
+------------------------ex03-------------------------------------------
+#include <stdlib.h>
+
+t_list	*ft_create_elem(void *data)
+{
+	t_list	*list;
+
+	list = NULL;
+	list = malloc (sizeof (t_list));
+	if (list)
+	{
+		list->data = data;
+		list->next = NULL;
+	}
+//	printf("%s\n", list->data);
+	return (list);
+}
+
+#include <stdlib.h>
+
+int main()
+{
+	t_list	*beggin;
+	t_list	test1;
+	t_list	test2;
+	t_list	*flist;
+	t_list	*fir;
+
+
+	beggin = &test1;
+	fir = beggin;
+	test1.next = &test2;
+	test2.next = ft_create_elem("Privet Kiska");
+	while (beggin)
+	{
+		printf("%s  %p\n",beggin->data, beggin->next);
+		beggin = beggin->next;
+	}
+	beggin = fir;
+	flist = ft_list_last(beggin);
+
+	printf("%s\n", flist->data);
+	return (0);
+}
+
